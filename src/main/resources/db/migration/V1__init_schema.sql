@@ -1,0 +1,11 @@
+CREATE TABLE events (
+    id BIGSERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    organizer_email VARCHAR(255) NOT NULL,
+    event_date TIMESTAMP NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    ticket_price NUMERIC(10, 2) NOT NULL,
+    age_limit INT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
