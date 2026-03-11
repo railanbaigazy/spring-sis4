@@ -15,14 +15,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 public class EventServiceImpl implements EventService {
     @Autowired
-    private final EventRepository eventRepository;
+    private EventRepository eventRepository;
 
     @Autowired
-    private final EventMapper eventMapper;
+    private EventMapper eventMapper;
 
     @Override
     public EventResponse create(CreateEventRequest request) {
